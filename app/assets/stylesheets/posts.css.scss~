@@ -1,0 +1,20 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  color: #3a3a3a; 
+  background: #f0f0f0;
+  font-size: 1.867em;
+}
+
+post-body{
+  
+}
+
+#category_cloud {
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-size: 0.2em; }
+  .m { font-size: 0.6em; }
+  .l { font-size: 1.2em; }
+}

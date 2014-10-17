@@ -1,0 +1,13 @@
+<footer class="navbar navbar-fixed-bottom" >
+  <div class="navbar-inner">
+  <small style="float:center">
+    Proudly developed on Ruby on Rails
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "About", "#" %></li>
+      <li><%= link_to "Contact", "#" %></li>
+    </ul>
+  </nav>
+</div>
+</footer>

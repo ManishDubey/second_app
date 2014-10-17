@@ -1,0 +1,23 @@
+<%- model_class = Post -%>
+<div class="page-header">
+  <h1><%= @post.title %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dd><%= @post.content.html_safe %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              posts_path, :class => 'btn btn-default center-block' %>
+</br>
+<table>
+<tbody>
+<% @category.each do |category| %>
+<tr>
+  <td><%= category.title %></td>
+  </br>
+</tr>
+<% end %>
+</tbody>
+</table>
+</br>

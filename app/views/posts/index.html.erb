@@ -1,0 +1,33 @@
+
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <td>
+        <tr><h1><%= post.title %></h1></tr>
+        <tr><%= sanitize(truncate(post.content, :length =>300)) %></tr>
+        <tr>
+          <%= link_to 'Show Post', post_path(post), :class => 'btn btn-xs' %>
+        </tr>
+</br>
+        <tr>
+        <%= raw post.categories.map(&:title).map { |t| link_to t, category_path(t) }.join(', ') %>
+        </tr>
+        </br>
+        </br>
+        </br>
+        </br>
+      </td>
+    <% end %>
+  </tbody>
+
+</br>
+<div class= "center" style= "font-size: 2.6em">
+<strong>Categories</strong>
+</div>
+</br>
+<div id="category_cloud" class="center-block">
+<% category_cloud Post.category_count, %w{s m l} do |category, css_class| %>
+    <%= link_to category.title, category_path(category.title), class: css_class %>
+  <% end %>
+</br>
+</br>
