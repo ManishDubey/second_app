@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
-  #get 'pages#index'
-  root to: 'posts#index'
+  root to: 'pages#index'
+  #root to: 'posts#index'
   get '/about', to: 'pages#about', as: 'about'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
